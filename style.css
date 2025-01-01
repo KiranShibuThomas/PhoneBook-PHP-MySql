@@ -1,0 +1,472 @@
+:root {
+    --primary: #2e3192;
+    --primary-light: #4649ff;
+    --secondary: #00f6ff;
+    --background: #0a1128;
+    --surface: #162447;
+    --text: #ffffff;
+    --text-secondary: #8892b0;
+    --error: #ff4757;
+    --success: #2ed573;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: var(--transition);
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background: rgba(22, 36, 71, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  
+  /* Auth Specific Styles */
+  .auth-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
+  
+  .auth-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background: var(--surface);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  
+  .auth-form {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 16px;
+    transition: var(--transition);
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 15px rgba(0, 246, 255, 0.1);
+  }
+  
+  button {
+    background: linear-gradient(45deg, var(--primary), var(--primary-light));
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(46, 49, 146, 0.2);
+    width: 100%;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 49, 146, 0.3);
+  }
+  
+  .error {
+    color: var(--error);
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255, 71, 87, 0.1);
+  }
+  
+  /* Contact Cards */
+  .contact-card {
+    background: var(--surface);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transform: translateY(0);
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .contact-info {
+    margin: 15px 0;
+  }
+  
+  .contact-info p {
+    margin: 8px 0;
+  }
+  
+  .contact-info span {
+    color: var(--secondary);
+    font-weight: 500;
+  }
+  
+  .actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn-edit, 
+  .btn-delete,
+  .btn-add,
+  .btn-logout,
+  .btn-search {
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: var(--transition);
+    text-align: center;
+  }
+  
+  .btn-edit {
+    background: var(--secondary);
+    color: var(--background);
+  }
+  
+  .btn-delete {
+    background: var(--error);
+    color: var(--text);
+  }
+  
+  .btn-add {
+    background: var(--success);
+    color: var(--text);
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  .btn-logout {
+    background: rgba(255, 71, 87, 0.2);
+    color: var(--error);
+  }
+  
+  .search-box {
+    margin-bottom: 30px;
+  }
+  
+  .search-box form {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-box input {
+    flex: 1;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  h2 {
+    background: linear-gradient(45deg, var(--secondary), var(--primary-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    color: var(--secondary);
+    font-size: 1.5rem;
+  }
+  
+  a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  a:hover {
+    color: var(--primary-light);
+  }
+  
+  .auth-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-secondary);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .contacts-list {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+      padding: 20px;
+    }
+    
+    .search-box form {
+      flex-direction: column;
+    }
+    
+    .actions {
+      flex-direction: column;
+    }
+    
+    .btn-edit,
+    .btn-delete {
+      width: 100%;
+    }
+  }
+
+
+/* Form Styles */
+.contact-form {
+    background: var(--surface);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-submit {
+    background: linear-gradient(45deg, var(--primary), var(--primary-light));
+    flex: 1;
+}
+
+.btn-cancel {
+    background: rgba(255, 71, 87, 0.1);
+    color: var(--error);
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+}
+
+.btn-back {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 20px;
+    border-radius: 6px;
+    color: var(--text);
+}
+
+.btn-back:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text);
+}
+
+/* Required field indicator */
+label[for]::after {
+    content: " *";
+    color: var(--error);
+}
+
+/* Success message */
+.success {
+    background: rgba(46, 213, 115, 0.1);
+    color: var(--success);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-left {
+    flex: 1;
+}
+
+.header-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.welcome-text {
+    color: var(--text-secondary);
+    margin-top: 5px;
+}
+
+/* Contact Card Styles */
+.contacts-list {
+    display: grid;
+    gap: 20px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.contact-card {
+    background: var(--surface);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    opacity: 0;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-details {
+    margin-top: 10px;
+}
+
+.contact-details p {
+    margin: 8px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.label {
+    color: var(--text-secondary);
+    min-width: 70px;
+}
+
+.value {
+    color: var(--text);
+}
+
+/* Empty States */
+.no-contacts, .no-results {
+    text-align: center;
+    padding: 40px;
+    background: var(--surface);
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.btn-add-large {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: var(--primary);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-add-large:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .header-right {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .btn-add, .btn-logout {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-card {
+        flex-direction: column;
+    }
+
+    .actions {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .contact-details p {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .label {
+        min-width: auto;
+    }
+}

@@ -1,4 +1,4 @@
-CREATE DATABASE phonebook;
+
 USE phonebook;
 
 CREATE TABLE users (
